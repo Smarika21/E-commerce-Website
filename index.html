@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROVA — Women's Minimal Clothing</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="navbar">
+    <div class="nav__logo">ROVA</div>
+    <nav class="nav__links">
+      <a href="#collection">Collection</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="icon-btn cart-btn" id="cartToggle" aria-label="Cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="menuToggle" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#collection" class="mobile-link">Collection</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- SEARCH BAR -->
+  <div class="search-bar" id="searchBar">
+    <input type="text" placeholder="Search pieces…" id="searchInput" />
+    <button class="search-close" id="searchClose">✕</button>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg">
+      <div class="hero__grain"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__tag fade-up">Women's New Arrivals — 2026</p>
+      <h1 class="hero__title fade-up">Dressed in<br /><em>Silence.</em></h1>
+      <p class="hero__sub fade-up">Curated womenswear for the woman who needs no introduction.</p>
+      <a href="#collection" class="btn fade-up">Explore Collection</a>
+    </div>
+    <div class="hero__scroll">
+      <span>scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Free shipping over $120 &nbsp;·&nbsp; Ethically made &nbsp;·&nbsp; Women's Slow Fashion &nbsp;·&nbsp; New drops every season &nbsp;·&nbsp; Sizes XS – XL &nbsp;·&nbsp;</span>
+      <span>Free shipping over $120 &nbsp;·&nbsp; Ethically made &nbsp;·&nbsp; Women's Slow Fashion &nbsp;·&nbsp; New drops every season &nbsp;·&nbsp; Sizes XS – XL &nbsp;·&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- COLLECTION -->
+  <section class="collection" id="collection">
+    <div class="collection__header">
+      <h2 class="section-title">The Collection</h2>
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="tops">Tops</button>
+        <button class="filter-btn" data-filter="bottoms">Bottoms</button>
+        <button class="filter-btn" data-filter="outerwear">Outerwear</button>
+        <button class="filter-btn" data-filter="footwear">Footwear</button>
+      </div>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+
+      <!-- TOP -->
+      
+      <div class="product-card" data-category="tops">
+        <div class="product-img-wrap">
+          <img src="./images/off-shoulder-linen-top.jpg" alt="Off-Shoulder Linen Top" loading="lazy" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Off-Shoulder Linen Top" data-price="68" data-img="off-shoulder-linen-top.jpg">Quick Add</button>
+          </div>
+          <span class="badge">New</span>
+        </div>
+        <div class="product-info">
+          <h3>Off-Shoulder Linen Top</h3>
+          <p class="product-cat">Tops</p>
+          <p class="product-price">$68</p>
+        </div>
+      </div>
+      
+      <div class="product-card" data-category="tops">
+        <div class="product-img-wrap">
+          <img src="./images/ribbed-fitted-knit.jpg" alt="Ribbed Bell-Sleeve Knit" loading="lazy" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Ribbed Bell-Sleeve Knit" data-price="58" data-img="ribbed-fitted-knit.jpg">Quick Add</button>
+          </div>
+          <span class="badge bestseller">Bestseller</span>
+        </div>
+        <div class="product-info">
+          <h3>Ribbed Bell-Sleeve Knit</h3>
+          <p class="product-cat">Tops</p>
+          <p class="product-price">$58</p>
+        </div>
+      </div>
+      
+      <div class="product-card" data-category="tops">
+        <div class="product-img-wrap">
+          <img src="./images/linen-crop-shirt.jpg" alt="Linen Crop Shirt" loading="lazy" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Linen Crop Shirt" data-price="62" data-img="linen-crop-shirt.jpg">Quick Add</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3>Linen Crop Shirt</h3>
+          <p class="product-cat">Tops</p>
+          <p class="product-price">$62</p>
+        </div>
+      </div>
+      
+      <div class="product-card" data-category="tops">
+        <div class="product-img-wrap">
+          <img src="./images/CIDER Satin V-Neck Wrap Zip Long Sleeve Blouse.jpg" alt="Satin Wrap Blouse" loading="lazy" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Satin Wrap Blouse" data-price="74" data-img="./images/CIDER Satin V-Neck Wrap Zip Long Sleeve Blouse.jpg">Quick Add</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3>Satin Wrap Blouse</h3>
+          <p class="product-cat">Tops</p>
+          <p class="product-price">$74</p>
+        </div>
+      </div>
+
+      <!-- BOTTOMS -->
+      
+      <div class="product-card" data-category="bottoms">
+        <div class="product-img-wrap">
+          <img src="./images/Natural_linen_wrap_skirt-Skirts-2040003-1441_Tiramisu_600x.jpg" alt="Linen Wrap Midi Skirt" loading="lazy"
+               onerror="this.onerror=null;this.src='./images/linen-midi-skirt.jpg';" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Linen Wrap Midi Skirt" data-price="86" data-img="linen-midi-skirt.jpg">Quick Add</button>
+          </div>
+          <span class="badge">New</span>
+        </div>
+        <div class="product-info">
+          <h3>Linen Wrap Midi Skirt</h3>
+          <p class="product-cat">Bottoms</p>
+          <p class="product-price">$86</p>
+        </div>
+      </div>
+      
+      <div class="product-card" data-category="bottoms">
+        <div class="product-img-wrap">
+          <img src="./images/wide-leg-linen-pants (1).jpg" alt="Wide Leg Linen Pants" loading="lazy" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Wide Leg Linen Pants" data-price="94" data-img="wide-leg-linen-pants.jpg">Quick Add</button>
+          </div>
+          <span class="badge bestseller">Bestseller</span>
+        </div>
+        <div class="product-info">
+          <h3>Wide Leg Linen Pants</h3>
+          <p class="product-cat">Bottoms</p>
+          <p class="product-price">$94</p>
+        </div>
+      </div>
+      
+      <div class="product-card" data-category="bottoms">
+        <div class="product-img-wrap">
+          <img src="./images/bias-cut-satin-skirt.jpg" alt="Bias Cut Satin Skirt" loading="lazy" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Bias Cut Satin Skirt" data-price="110" data-img="bias-cut-satin-skirt.jpg">Quick Add</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3>Bias Cut Satin Skirt</h3>
+          <p class="product-cat">Bottoms</p>
+          <p class="product-price">$110</p>
+        </div>
+      </div>
+      
+      <div class="product-card" data-category="bottoms">
+        <div class="product-img-wrap">
+          <img src="./images/Dress Belt Pleated Maxi Skirt High Waisted A Line Flowy Long Skirts with Pocket.jpg" alt="Pleated Maxi Skirt" loading="lazy" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Pleated Maxi Skirt" data-price="98" data-img="pleated-maxi-skirt.jpg">Quick Add</button>
+          </div>
+          <span class="badge">New</span>
+        </div>
+        <div class="product-info">
+          <h3>Pleated Maxi Skirt</h3>
+          <p class="product-cat">Bottoms</p>
+          <p class="product-price">$98</p>
+        </div>
+      </div>
+
+      <!--  OUTERWEAR -->
+      
+      <div class="product-card" data-category="outerwear">
+        <div class="product-img-wrap">
+          <img src="./images/Zara Women's Felt Texture With Lapel Collar Coat In Mid Camel - Large.jpg" alt="Camel Wool Overcoat" loading="lazy" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Camel Wool Overcoat" data-price="228" data-img="./images/Zara Women's Felt Texture With Lapel Collar Coat In Mid Camel - Large.jpg">Quick Add</button>
+          </div>
+          <span class="badge bestseller">Bestseller</span>
+        </div>
+        <div class="product-info">
+          <h3>Camel Wool Overcoat</h3>
+          <p class="product-cat">Outerwear</p>
+          <p class="product-price">$228</p>
+        </div>
+      </div>
+      
+      <div class="product-card" data-category="outerwear">
+        <div class="product-img-wrap">
+          <img src="./images/longline-trench-coat.jpg" alt="Longline Trench Coat" loading="lazy" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Longline Trench Coat" data-price="195" data-img="longline-trench-coat.jpg">Quick Add</button>
+          </div>
+          <span class="badge">New</span>
+        </div>
+        <div class="product-info">
+          <h3>Longline Trench Coat</h3>
+          <p class="product-cat">Outerwear</p>
+          <p class="product-price">$195</p>
+        </div>
+      </div>
+      
+      <div class="product-card" data-category="outerwear">
+        <div class="product-img-wrap">
+          <img src="./images/oversized-linen-blazer.jpg" alt="Oversized Linen Blazer" loading="lazy" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Oversized Linen Blazer" data-price="148" data-img="oversized-linen-blazer.jpg">Quick Add</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3>Oversized Linen Blazer</h3>
+          <p class="product-cat">Outerwear</p>
+          <p class="product-price">$148</p>
+        </div>
+      </div>
+      
+      <div class="product-card" data-category="outerwear">
+        <div class="product-img-wrap">
+          <img src="./images/Aesthetic Winter Cardigan – Must Have! (1).jpg" alt="Cable Knit Cardigan" loading="lazy" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Cable Knit Cardigan" data-price="118" data-img="soft-knit-cardigan.jpg">Quick Add</button>
+          </div>
+          <span class="badge">New</span>
+        </div>
+        <div class="product-info">
+          <h3>Cable Knit Cardigan</h3>
+          <p class="product-cat">Outerwear</p>
+          <p class="product-price">$118</p>
+        </div>
+      </div>
+
+      <!-- cd C:\Users\Dell\Downloads\expense-tracker
+FOOTWEAR -->
+      <div class="product-card" data-category="footwear">
+        <div class="product-img-wrap">
+          <img src="./images/Cocobutter Square Toe Lily Flip Flops Tkees.jpg" alt="Barely There Sandals" loading="lazy"
+               onerror="this.onerror=null;this.src='./images/Cocobutter Square Toe Lily Flip Flops Tkees.jpg';" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Barely There Sandals" data-price="88" data-img="https://images.unsplash.com/photo-1622020457014-4379f4b6efc4?w=600&q=80">Quick Add</button>
+          </div>
+          <span class="badge">New</span>
+        </div>
+        <div class="product-info">
+          <h3>Barely There Sandals</h3>
+          <p class="product-cat">Footwear</p>
+          <p class="product-price">$88</p>
+        </div>
+      </div>
+      
+      <div class="product-card" data-category="footwear">
+        <div class="product-img-wrap">
+          <img src="./images/👠.jpg" alt="Square Toe Mules" loading="lazy" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Square Toe Mules" data-price="112" data-img="./images/👠.jpg">Quick Add</button>
+          </div>
+          <span class="badge bestseller">Bestseller</span>
+        </div>
+        <div class="product-info">
+          <h3>Square Toe Mules</h3>
+          <p class="product-cat">Footwear</p>
+          <p class="product-price">$112</p>
+        </div>
+      </div>
+      
+      <div class="product-card" data-category="footwear">
+        <div class="product-img-wrap">
+          <img src="./images/Men's Chelsea Boots _ Men's Leather Boots United States _ R_M.Williams®️" alt="Leather Chelsea Boots" loading="lazy" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Leather Chelsea Boots" data-price="168" data-img="./images/Men's Chelsea Boots _ Men's Leather Boots United States _ R_M.Williams®️">Quick Add</button>
+          </div>
+          <span class="badge">New</span>
+        </div>
+        <div class="product-info">
+          <h3>Leather Chelsea Boots</h3>
+          <p class="product-cat">Footwear</p>
+          <p class="product-price">$168</p>
+        </div>
+      </div>
+      
+      <div class="product-card" data-category="footwear">
+        <div class="product-img-wrap">
+          <img src="./images/DAMES PLATTE SCHOENEN MET POLKADOT EN GESP.jpg" alt="Suede Pointed Flats" loading="lazy" />
+          <div class="product-overlay">
+            <button class="quick-add" data-name="Suede Pointed Flats" data-price="96" data-img="./images/DAMES PLATTE SCHOENEN MET POLKADOT EN GESP.jpg">Quick Add</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3>Suede Pointed Flats</h3>
+          <p class="product-cat">Footwear</p>
+          <p class="product-price">$96</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+  <section class="about" id="about">
+    <div class="about__image">
+      <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&q=80" alt="About ROVA" />
+    </div>
+    <div class="about__text">
+      <p class="eyebrow">Our Philosophy</p>
+      <h2>Designed for<br />her quiet power.</h2>
+      <p>ROVA is a women's brand built on the belief that great clothing should feel like a second skin — never a costume. Natural fabrics, thoughtful silhouettes, and nothing that shouts. Just pieces that move with you through every version of your day.</p>
+      <a href="#collection" class="btn btn--outline">Shop the Range</a>
+    </div>
+  </section>
+  
+  <section class="newsletter">
+    <p class="eyebrow">Stay in the loop</p>
+    <h2>New drops. No spam.</h2>
+    <form class="newsletter__form" id="newsletterForm">
+      <input type="email" placeholder="your@email.com" required id="emailInput" />
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="newsletter__note" id="newsletterMsg"></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <p class="footer__logo">ROVA</p>
+        <p>Minimal clothing for<br />intentional living.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Shop</h4>
+        <a href="#collection">All Pieces</a>
+        <a href="#collection">Tops</a>
+        <a href="#collection">Bottoms</a>
+        <a href="#collection">Outerwear</a>
+        <a href="#collection">Footwear</a>
+      </div>
+      <div class="footer__links">
+        <h4>Help</h4>
+        <a href="#">Sizing Guide</a>
+        <a href="#">Returns</a>
+        <a href="#">Shipping</a>
+      </div>
+      <div class="footer__links">
+        <h4>Follow</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 ROVA. All rights reserved.</p>
+      <p>Crafted with intention.</p>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer__header">
+      <h3>Your Bag</h3>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-drawer__items" id="cartItems">
+      <p class="cart-empty">Your bag is empty.</p>
+    </div>
+    <div class="cart-drawer__footer" id="cartFooter" style="display:none">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <button class="btn btn--full">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
