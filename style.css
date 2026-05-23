@@ -370,7 +370,7 @@ button {
   100% { left: 100%; }
 }
 
-/* FADE UP ANIMATION */
+
 .fade-up {
   opacity: 0;
   transform: translateY(28px);

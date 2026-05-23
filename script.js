@@ -1,5 +1,7 @@
 
+
 document.addEventListener('DOMContentLoaded', () => {
+
   
   document.querySelectorAll('.product-img-wrap img').forEach(img => {
     img.addEventListener('error', function () {
@@ -13,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
+  
   const navbar = document.getElementById('navbar');
 
   window.addEventListener('scroll', () => {
@@ -24,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+
+ 
   const menuToggle  = document.getElementById('menuToggle');
   const mobileMenu  = document.getElementById('mobileMenu');
   const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -42,6 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  
   const searchToggle = document.getElementById('searchToggle');
   const searchBar    = document.getElementById('searchBar');
   const searchClose  = document.getElementById('searchClose');
@@ -63,7 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
       searchInput.value = '';
     }
   });
- 
+
+  
   searchInput.addEventListener('input', () => {
     const query = searchInput.value.toLowerCase().trim();
     const cards = document.querySelectorAll('.product-card');
@@ -77,7 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-  
+
+
+ 
   const filterBtns = document.querySelectorAll('.filter-btn');
   const productCards = document.querySelectorAll('.product-card');
 
@@ -97,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
 
   const cartToggle  = document.getElementById('cartToggle');
   const cartClose   = document.getElementById('cartClose');
@@ -146,7 +156,11 @@ document.addEventListener('DOMContentLoaded', () => {
     cartFooter.style.display = 'block';
     cartItemsEl.innerHTML = cart.map((item, index) => `
       <div class="cart-item">
-        <img src="${item.img}" alt="${item.name}" />
+        <img
+          src="${item.img}"
+          alt="${item.name}"
+          onerror="this.onerror=null;this.style.background='#e8dcc8';this.style.opacity='0.5';"
+        />
         <div>
           <p class="cart-item__name">${item.name}</p>
           <p class="cart-item__price">$${item.price} × ${item.qty}</p>
@@ -174,7 +188,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const name  = btn.dataset.name;
     const price = parseInt(btn.dataset.price);
-    const img   = btn.dataset.img;
+    
+    const card  = btn.closest('.product-card');
+    const imgEl = card ? card.querySelector('.product-img-wrap img') : null;
+    const img   = imgEl ? (imgEl.currentSrc || imgEl.src) : btn.dataset.img;
 
     const existing = cart.find(item => item.name === name);
     if (existing) {
@@ -187,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartCount();
     showToast(`${name} added to bag`);
   });
+
   
   const toastEl = document.getElementById('toast');
   let toastTimer = null;
@@ -200,6 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
       toastEl.classList.remove('show');
     }, 2600);
   }
+
   
   const newsletterForm = document.getElementById('newsletterForm');
   const newsletterMsg  = document.getElementById('newsletterMsg');
@@ -210,6 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = emailInput.value.trim();
 
     if (!email) return;
+
     
     newsletterMsg.textContent = 'Subscribing…';
     setTimeout(() => {
@@ -217,7 +237,8 @@ document.addEventListener('DOMContentLoaded', () => {
       emailInput.value = '';
     }, 900);
   });
-  
+
+
   const revealEls = document.querySelectorAll('.product-card, .about__text, .about__image, .newsletter');
 
   const revealObserver = new IntersectionObserver((entries) => {
@@ -237,6 +258,8 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(el);
   });
 
+
+  
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       const target = document.querySelector(link.getAttribute('href'));
